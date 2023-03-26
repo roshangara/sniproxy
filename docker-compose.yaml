@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  sniproxy:
+    image: roshangara/sniproxy:latest
+    container_name: roshangara-sniproxy
+    restart: always
+    environment:
+      - TZ=Asia/Tehran
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "80:80"
+      - "443:443"
